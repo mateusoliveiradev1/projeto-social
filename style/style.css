@@ -68,6 +68,8 @@ section#redes-sociais {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  /* Espaçamento consistente entre ícones sem depender de margens internas */
+  gap: clamp(6px, 2vh, 10px);
 }
 
 /* Oculta quebras de linha do HTML para não influenciar o layout flex */
@@ -78,7 +80,7 @@ section#redes-sociais br {
 /* Ícones responsivos com clamp para adaptar em telas pequenas */
 section#redes-sociais img {
   width: clamp(36px, 8vw, 50px);
-  margin: clamp(6px, 2vw, 10px);
+  margin: 0; /* espaçamento controlado pelo gap do container */
   border-radius: 50%;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
@@ -126,10 +128,53 @@ section#redes-sociais img:hover {
   section#redes-sociais {
     right: clamp(4px, 2vw, 12px);
     top: clamp(8px, 9vh, 14vh);
+    gap: clamp(4px, 1.6vh, 8px);
   }
 
   section#redes-sociais img {
     width: clamp(28px, 7vw, 40px);
-    margin: clamp(6px, 1.5vh, 8px) 0;
+    margin: 0;
+  }
+}
+
+/* Telas extremamente pequenas: reduzir ainda mais ícones e folgas */
+@media (max-width: 360px) {
+  main {
+    padding-right: calc(
+      clamp(24px, 6vw, 34px) +
+      clamp(2px, 2vw, 8px) +
+      10px
+    );
+  }
+
+  section#telefone {
+    width: min(
+      calc(100vw - (
+        clamp(24px, 6vw, 34px) +
+        clamp(2px, 2vw, 8px) +
+        14px
+      )),
+      311px
+    );
+  }
+
+  section#redes-sociais {
+    right: clamp(2px, 2vw, 8px);
+    top: clamp(6px, 8vh, 12vh);
+    gap: clamp(3px, 1.2vh, 6px);
+  }
+
+  section#redes-sociais img {
+    width: clamp(24px, 6vw, 34px);
+  }
+}
+
+/* Desativar/amenizar hover em dispositivos touch para evitar "saltos" visuais */
+@media (hover: none), (pointer: coarse) {
+  section#redes-sociais img:hover {
+    transform: none;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    transition: none;
   }
 }
