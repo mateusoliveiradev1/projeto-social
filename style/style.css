@@ -51,13 +51,13 @@ iframe#tela {
   width: 267px;
 }
 
+/* Barra de ícones das redes alinhada à direita do viewport */
 section#redes-sociais {
-  /* Barra de ícones das redes alinhada à direita do viewport */
   text-align: right;
 }
 
+/* Ícones: tamanho fixo, formato circular e sombra suave */
 section#redes-sociais img {
-  /* Ícones: tamanho fixo, formato circular e sombra suave */
   width: 50px;
   margin: 10px;
   border-radius: 50%;
@@ -65,8 +65,8 @@ section#redes-sociais img {
   box-sizing: border-box;
 }
 
+/* Hover: destaque com borda, leve deslocamento e transição suave */
 section#redes-sociais img:hover {
-  /* Hover: destaque com borda, leve deslocamento e transição suave */
   border: 2px solid rgba(255, 255, 255, 0.6);
   transform: translate(-3px, -3px);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
