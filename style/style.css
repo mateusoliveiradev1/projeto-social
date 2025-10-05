@@ -39,6 +39,14 @@ section#telefone {
   background: url(../images/frame-iphone.png) no-repeat;
 }
 
-/* Seção de redes sociais (links/ícones)
-   Adicione aqui estilos para posicionamento e interação do #redes-sociais
+/* Área da tela exibida dentro da moldura do telefone
+   - Posição relativa com offsets calibrados para alinhar ao visor
+   - Dimensões ajustadas para caber sem ultrapassar a borda da moldura
 */
+iframe#tela {
+  position: relative;
+  top: 80px;
+  left: 22px;
+  height: 471px;
+  width: 267px;
+}
