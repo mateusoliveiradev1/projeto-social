@@ -62,22 +62,19 @@ iframe#tela {
 section#redes-sociais {
   position: fixed;
   right: clamp(10px, 3.5vw, 24px);
-  /* Mais próximo do topo em telas altas */
+  /* Próximo do topo em telas altas */
   top: clamp(6px, 6vh, 12vh);
   transform: none;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  /* Trilho semitransparente para destacar ícones sobre o fundo */
-  background: rgba(0, 0, 0, 0.25);
-  padding: clamp(6px, 2vh, 10px);
-  border-radius: 12px;
-  backdrop-filter: blur(2px);
   /* Espaçamento consistente entre ícones */
   gap: clamp(6px, 2vh, 10px);
   /* Limitar altura e permitir rolagem se necessário */
   max-height: 85vh;
   overflow-y: auto;
+  z-index: 2;
+  transition: transform 200ms ease, opacity 160ms ease;
 }
 
 /* Oculta quebras de linha do HTML para não influenciar o layout flex */
@@ -107,37 +104,45 @@ section#redes-sociais img:hover {
   body {
     background-attachment: scroll;
   }
+  /* Por padrão, esconder a barra de ícones no mobile e mostrar via toggle */
+  section#redes-sociais {
+    transform: translateX(120%);
+    opacity: 0;
+    pointer-events: none;
+  }
+  body.menu-open section#redes-sociais {
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
-/* Telefones muito pequenos: reservar área lateral direita para ícones */
+/* Telefones muito pequenos: reservar área apenas quando o menu estiver aberto */
 @media (max-width: 480px) {
-  /* Cria um "safe area" à direita equivalente à barra de ícones */
-  main {
+  body.menu-open main {
     padding-right: calc(
       clamp(28px, 7vw, 40px) /* largura do ícone */ +
       clamp(4px, 2vw, 12px)  /* afastamento da borda direita */ +
-      18px                   /* folga adicional incluindo padding do trilho */
+      12px                   /* folga adicional */
     );
   }
 
-  /* Reduz a largura do frame para não invadir a área dos ícones */
-  section#telefone {
+  body.menu-open section#telefone {
     width: min(
       calc(100vw - (
         clamp(28px, 7vw, 40px) +
         clamp(4px, 2vw, 12px) +
-        24px
+        16px
       )),
       311px
     );
   }
 
-  /* Ajusta posição e tamanho dos ícones para telas bem pequenas */
+  /* Ajustes finos de posição/tamanho dos ícones para telas bem pequenas */
   section#redes-sociais {
     right: clamp(4px, 2vw, 12px);
     top: clamp(8px, 8vh, 12vh);
     gap: clamp(4px, 1.6vh, 8px);
-    padding: clamp(4px, 1.6vh, 8px);
   }
 
   section#redes-sociais img {
@@ -148,7 +153,7 @@ section#redes-sociais img:hover {
 
 /* Telas extremamente pequenas: reduzir ainda mais ícones e folgas */
 @media (max-width: 360px) {
-  main {
+  body.menu-open main {
     padding-right: calc(
       clamp(24px, 6vw, 34px) +
       clamp(2px, 2vw, 8px) +
@@ -156,7 +161,7 @@ section#redes-sociais img:hover {
     );
   }
 
-  section#telefone {
+  body.menu-open section#telefone {
     width: min(
       calc(100vw - (
         clamp(24px, 6vw, 34px) +

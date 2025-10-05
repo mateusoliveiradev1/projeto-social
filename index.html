@@ -14,6 +14,14 @@
   </head>
   <body>
     <!-- Conteúdo principal do projeto -->
+    <!-- Toggle de menu mobile: checkbox + label atuando como botão -->
+    <input type="checkbox" id="toggle-menu" style="display:none" />
+    <label for="toggle-menu" id="menu-button" aria-label="Abrir menu" title="Menu">
+      <!-- Botão simples estilo hambúrguer -->
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
     <main>
       <!-- Moldura do "telefone" onde o conteúdo será exibido -->
       <section id="telefone">
@@ -43,5 +51,60 @@
         /></a>
       </section>
     </main>
+    <style>
+      /* Botão hambúrguer flutuante visível só no mobile */
+      #menu-button {
+        position: fixed;
+        right: clamp(10px, 3.5vw, 24px);
+        top: clamp(8px, 7vh, 12vh);
+        width: 36px;
+        height: 36px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        background: rgba(0,0,0,0.35);
+        border-radius: 10px;
+        backdrop-filter: blur(2px);
+        cursor: pointer;
+        z-index: 3;
+      }
+      #menu-button span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #fff;
+        border-radius: 2px;
+      }
+      @media (max-width: 768px) {
+        #menu-button { display: flex; }
+      }
+      /* Quando toggle ativo, aplica classe ao body via CSS-only */
+      /* Usando :checked + sibling selector para marcar body */
+      /* Estrutura: input + label + main; body com data-state via attribute */
+      /* Alternativa: aplicar diretamente estado ao body via atributo (não suportado sem JS) */
+      /* Solução: interceptar com selector e exibir barra sem alterar body */
+      #toggle-menu:checked ~ main section#redes-sociais {
+        transform: none !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+      }
+      #toggle-menu:checked ~ main {
+        padding-right: calc(
+          clamp(28px, 7vw, 40px) +
+          clamp(4px, 2vw, 12px) +
+          12px
+        );
+      }
+      @media (max-width: 360px) {
+        #toggle-menu:checked ~ main {
+          padding-right: calc(
+            clamp(24px, 6vw, 34px) +
+            clamp(2px, 2vw, 8px) +
+            10px
+          );
+        }
+      }
+    </style>
   </body>
 </html>
