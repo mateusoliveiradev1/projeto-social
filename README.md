@@ -3,7 +3,7 @@
   <img src="favicon.ico" alt="Ícone" width="64" />
 
   <h1>Projeto Redes Sociais 📱</h1>
-  <p><i>Uma UI estilo smartphone, com conteúdos de redes sociais exibidos no visor. Barra de ícones à direita no desktop e menu mobile com FAB animado — tudo em HTML + CSS.</i></p>
+  <p><i>UI estilo smartphone, com conteúdos de redes sociais exibidos no visor. Barra de ícones à direita no desktop e menu mobile com FAB animado — tudo em HTML + CSS.</i></p>
 
   <a href="https://mateusoliveiradev1.github.io/projeto-social/" target="_blank">
     <img src="https://img.shields.io/badge/Live%20Demo-acesse-success" alt="Live Demo" />
@@ -11,6 +11,9 @@
   <img src="https://img.shields.io/badge/license-MIT-blue" alt="License" />
   <img src="https://img.shields.io/badge/HTML-5-E34F26?logo=html5&logoColor=white" alt="HTML" />
   <img src="https://img.shields.io/badge/CSS-3-1572B6?logo=css3&logoColor=white" alt="CSS" />
+  <img src="https://img.shields.io/github/last-commit/mateusoliveiradev1/projeto-social?color=informational" alt="Last Commit" />
+  <img src="https://img.shields.io/github/repo-size/mateusoliveiradev1/projeto-social?color=blueviolet" alt="Repo Size" />
+  <img src="https://img.shields.io/github/issues/mateusoliveiradev1/projeto-social?color=orange" alt="Issues" />
 
 </div>
 
@@ -50,6 +53,22 @@ Interface estática que simula um smartphone. A moldura central acomoda um `ifra
 
 > Dica: se quiser, podemos adicionar uma captura completa da interface diretamente aqui. É só enviar uma imagem ou me pedir para gerar e incluir.
 
+### Abrir no celular
+<div align="center">
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https%3A%2F%2Fmateusoliveiradev1.github.io%2Fprojeto-social%2F" alt="QR Code para abrir a demo no celular" />
+  <p>Escaneie para abrir a versão online no seu smartphone.</p>
+</div>
+
+### Logos das redes (exibidos na barra)
+<p align="center">
+  <img src="images/logo-home.jpg" alt="Home" width="40" />
+  <img src="images/logo-youtube.jpg" alt="YouTube" width="40" />
+  <img src="images/logo-github.jpg" alt="GitHub" width="40" />
+  <img src="images/logo-instagram.jpg" alt="Instagram" width="40" />
+  <img src="images/logo-twitter.jpg" alt="Twitter" width="40" />
+  <img src="images/logo-facebook.jpg" alt="Facebook" width="40" />
+</p>
+
 ## Executar localmente
 Requisitos: qualquer navegador moderno. Opcionalmente, Python para um servidor simples.
 
@@ -58,6 +77,19 @@ Requisitos: qualquer navegador moderno. Opcionalmente, Python para um servidor s
   - Abra: `http://localhost:8000/`
 
 - Sem servidor: abra `index.html` diretamente no navegador (algumas features funcionam melhor via servidor).
+
+### Quick Start
+```bash
+# 1) Clonar
+git clone https://github.com/mateusoliveiradev1/projeto-social.git
+cd projeto-social
+
+# 2) Rodar em servidor simples
+python -m http.server 8000
+
+# 3) Abrir no navegador
+http://localhost:8000/
+```
 
 ## Publicação (GitHub Pages)
 1. Suba a branch `main` para seu repositório.
@@ -93,6 +125,17 @@ projeto-social/
 - Diâmetro dos ícones: controlado por `clamp()` em `section#redes-sociais img`.
 - Posição do FAB: controlada por `#menu-button` em `index.html`.
 
+<details>
+  <summary><b>Detalhes técnicos</b></summary>
+
+  - Layout da barra de ícones: `display: flex` + `gap` com rolagem vertical.
+  - Responsividade: `clamp()` para ícones e espaçamentos; media queries para 768px, 480px e 360px.
+  - Menu mobile: checkbox + label (FAB) com SVG; transições para hambúrguer → X.
+  - Moldura e visor: `section#telefone` com `aspect-ratio`; `iframe#tela` alinhado por percentuais.
+  - Performance: preload de imagens críticas e `background-attachment: scroll` no mobile.
+
+</details>
+
 ## Acessibilidade
 - Ícones possuem `alt`; considere adicionar `aria-label` nos links.
 - Mantenha contraste do FAB adequado; foque em estados `:focus-visible` se desejar.
@@ -102,6 +145,13 @@ projeto-social/
 - [ ] Ícones em SVG otimizados e placeholders para redes futuras
 - [ ] Tema claro/escuro via CSS variables
 - [ ] Ajustes finos para diferentes densidades de tela
+- [ ] Botão FAB com variações de cor (tema) configuráveis
+- [ ] Inclusão de GIF curto mostrando o toggle do menu
+
+## Links rápidos
+- Demo: https://mateusoliveiradev1.github.io/projeto-social/
+- Repositório: https://github.com/mateusoliveiradev1/projeto-social
+- Issues: https://github.com/mateusoliveiradev1/projeto-social/issues
 
 ## Licença e Créditos
 - Licença: MIT (veja `LICENSE`).
