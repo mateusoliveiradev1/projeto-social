@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Favicon do projeto -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Preload de imagens críticas para reduzir LCP -->
+    <link rel="preload" as="image" href="images/fundo-madeira.jpg" />
+    <link rel="preload" as="image" href="images/frame-iphone.png" />
     <!-- CSS principal com layout e estilos das seções -->
     <link rel="stylesheet" href="style/style.css" />
     <title>Projeto Redes Sociais</title>
@@ -21,22 +24,22 @@
       <!-- Seção para ícones/links das redes sociais -->
       <section id="redes-sociais">
         <a href="pages/home.html" target="tela">
-          <img src="images/logo-home.jpg" alt="Logo Home" /></a
+          <img src="images/logo-home.jpg" alt="Logo Home" width="50" height="50" loading="lazy" decoding="async" /></a
         ><br />
         <a href="pages/youtube.html" target="tela">
-          <img src="images/logo-youtube.jpg" alt="Logo Youtube" /></a
+          <img src="images/logo-youtube.jpg" alt="Logo Youtube" width="50" height="50" loading="lazy" decoding="async" /></a
         ><br />
         <a href="pages/github.html" target="tela">
-          <img src="images/logo-github.jpg" alt="Logo Github" /></a
+          <img src="images/logo-github.jpg" alt="Logo Github" width="50" height="50" loading="lazy" decoding="async" /></a
         ><br />
         <a href="pages/instagram.html" target="tela">
-          <img src="images/logo-instagram.jpg" alt="Logo Instagram" /></a
+          <img src="images/logo-instagram.jpg" alt="Logo Instagram" width="50" height="50" loading="lazy" decoding="async" /></a
         ><br />
         <a href="pages/twitter.html" target="tela">
-          <img src="images/logo-twitter.jpg" alt="Logo Twitter" /></a
+          <img src="images/logo-twitter.jpg" alt="Logo Twitter" width="50" height="50" loading="lazy" decoding="async" /></a
         ><br />
         <a href="pages/facebook.html" target="tela">
-          <img src="images/logo-facebook.jpg" alt="Logo Facebook"
+          <img src="images/logo-facebook.jpg" alt="Logo Facebook" width="50" height="50" loading="lazy" decoding="async"
         /></a>
       </section>
     </main>

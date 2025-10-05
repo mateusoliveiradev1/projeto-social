@@ -26,7 +26,9 @@ body {
 /* Container principal ocupa toda a altura da tela */
 main {
   position: relative;
+  /* Viewport dinâmica em mobile para evitar saltos ao mostrar/ocultar barras */
   height: 100vh;
+  min-height: 100dvh;
 }
 
 /* Moldura do iPhone centralizada para exibir conteúdo dentro da área */
@@ -35,32 +37,47 @@ section#telefone {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 627px;
-  width: 311px;
+  /* Moldura responsiva: mantém proporção original e escala com a viewport */
+  width: min(85vw, 311px);
+  aspect-ratio: 311 / 627;
   background: url(../images/frame-iphone.png) no-repeat;
+  background-size: 100% 100%;
 }
 
 /* Área da tela exibida dentro da moldura do telefone
    - Posição relativa com offsets calibrados para alinhar ao visor
    - Dimensões ajustadas para caber sem ultrapassar a borda da moldura
 */
+/* Tela interna responsiva alinhada ao visor da moldura */
 iframe#tela {
-  position: relative;
-  top: 80px;
-  left: 22px;
-  height: 471px;
-  width: 267px;
+  position: absolute;
+  top: 12.76%;
+  left: 7.07%;
+  height: 75.12%;
+  width: 85.86%;
 }
 
 /* Barra de ícones das redes alinhada à direita do viewport */
+/* Barra de ícones: coluna à direita, centralizada verticalmente e com espaçamento consistente */
 section#redes-sociais {
-  text-align: right;
+  position: fixed;
+  right: clamp(8px, 3vw, 16px);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-/* Ícones: tamanho fixo, formato circular e sombra suave */
+/* Oculta quebras de linha do HTML para não influenciar o layout flex */
+section#redes-sociais br {
+  display: none;
+}
+
+/* Ícones responsivos com clamp para adaptar em telas pequenas */
 section#redes-sociais img {
-  width: 50px;
-  margin: 10px;
+  width: clamp(36px, 8vw, 50px);
+  margin: clamp(6px, 2vw, 10px);
   border-radius: 50%;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
@@ -69,7 +86,14 @@ section#redes-sociais img {
 /* Hover: destaque com borda, leve deslocamento e transição suave */
 section#redes-sociais img:hover {
   border: 2px solid rgba(255, 255, 255, 0.6);
-  transform: translate(-3px, -3px);
+  transform: translate(-2px, -2px);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s, border 0.3s, box-shadow 0.3s;
+}
+
+/* Mobile: desabilita attachment fixo para melhor desempenho */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
 }

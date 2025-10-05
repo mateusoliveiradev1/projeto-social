@@ -15,9 +15,11 @@
   height: 0px;
 }
 
-/* A imagem de cada página ocupa toda a largura disponível */
+/* Imagem ocupa a largura do container, mantendo proporções */
 img {
-  width: 100vw;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Link de ação: estilo do botão de acesso em estado padrão */
