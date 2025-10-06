@@ -11,9 +11,12 @@
   <img src="https://img.shields.io/badge/License-MIT-795548?style=for-the-badge" alt="License" />
   <img src="https://img.shields.io/badge/HTML-5-E34F26?logo=html5&logoColor=white&style=for-the-badge" alt="HTML" />
   <img src="https://img.shields.io/badge/CSS-3-1572B6?logo=css3&logoColor=white&style=for-the-badge" alt="CSS" />
-  <img src="https://img.shields.io/github/last-commit/mateusoliveiradev1/projeto-social?color=8D6E63&style=for-the-badge" alt="Last Commit" />
-  <img src="https://img.shields.io/github/repo-size/mateusoliveiradev1/projeto-social?color=A1887F&style=for-the-badge" alt="Repo Size" />
-  <img src="https://img.shields.io/github/issues/mateusoliveiradev1/projeto-social?color=FFB300&style=for-the-badge" alt="Issues" />
+  <img src="https://img.shields.io/github/last-commit/mateusoliveiradev1/projeto-social?color=6D4C41&style=for-the-badge" alt="Last Commit" />
+  <img src="https://img.shields.io/github/repo-size/mateusoliveiradev1/projeto-social?color=6D4C41&style=for-the-badge" alt="Repo Size" />
+  <img src="https://img.shields.io/github/issues/mateusoliveiradev1/projeto-social?color=6D4C41&style=for-the-badge" alt="Issues" />
+
+  <br/>
+  <img src="images/fab-toggle-300.gif" alt="Animação do FAB (hambúrguer → X)" width="300" style="border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,0.15); border:1px solid #ddd; margin-top:8px;" />
 
 </div>
 
@@ -22,7 +25,7 @@
 ## Sumário
 - Visão Geral
 - Funcionalidades
-- Capturas de tela
+- Animação do FAB
 - Executar localmente
 - Publicação (GitHub Pages)
 - Estrutura
@@ -59,7 +62,7 @@ Interface estática que simula um smartphone. A moldura central acomoda um `ifra
 > Como capturar: abra a demo, maximize a janela, pressione `PrtScn` (Windows) ou `Shift+Cmd+4` (macOS) e salve como `images/screenshot-desktop.jpg`. Depois, faça commit.
 
 ## Animação do FAB
-Visual do botão circular com hambúrguer → X (CSS + SVG).
+Visual do botão circular com hambúrguer → X (CSS + SVG). A demonstração visual está no topo.
 
 ```html
 <!-- Trecho simplificado do botão -->
@@ -81,9 +84,7 @@ Como gerar o GIF:
 - Recorte para 300×300 ou 400×400, compressão moderada.
 - Salve em `images/fab-toggle.gif` e substitua aqui com:
 
-<p align="center">
-  <img src="images/fab-toggle-300.gif" alt="Animação do FAB (hambúrguer → X)" width="300" style="border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,0.15); border:1px solid #ddd;" />
-</p>
+<!-- GIF exibido no topo para evitar repetição -->
 
 > Dica: se quiser, podemos adicionar uma captura completa da interface diretamente aqui. É só enviar uma imagem ou me pedir para gerar e incluir.
 
@@ -177,12 +178,12 @@ projeto-social/
 - Mantenha contraste do FAB adequado; foque em estados `:focus-visible` se desejar.
 
 ## Roadmap
-- [ ] Adicionar screenshot completo da interface no README
+- [x] Adicionar screenshot completo da interface no README
 - [ ] Ícones em SVG otimizados e placeholders para redes futuras
 - [ ] Tema claro/escuro via CSS variables
 - [ ] Ajustes finos para diferentes densidades de tela
 - [ ] Botão FAB com variações de cor (tema) configuráveis
-- [ ] Inclusão de GIF curto mostrando o toggle do menu
+- [x] Inclusão de GIF curto mostrando o toggle do menu
 
 ## Links rápidos
 - Demo: https://mateusoliveiradev1.github.io/projeto-social/
