@@ -6,14 +6,14 @@
   <p><i>UI estilo smartphone, com conteúdos de redes sociais exibidos no visor. Barra de ícones à direita no desktop e menu mobile com FAB animado — tudo em HTML + CSS.</i></p>
 
   <a href="https://mateusoliveiradev1.github.io/projeto-social/" target="_blank">
-    <img src="https://img.shields.io/badge/Live%20Demo-acesse-success" alt="Live Demo" />
+    <img src="https://img.shields.io/badge/DEMO-Acesse-00C853?style=for-the-badge" alt="Live Demo" />
   </a>
-  <img src="https://img.shields.io/badge/license-MIT-blue" alt="License" />
-  <img src="https://img.shields.io/badge/HTML-5-E34F26?logo=html5&logoColor=white" alt="HTML" />
-  <img src="https://img.shields.io/badge/CSS-3-1572B6?logo=css3&logoColor=white" alt="CSS" />
-  <img src="https://img.shields.io/github/last-commit/mateusoliveiradev1/projeto-social?color=informational" alt="Last Commit" />
-  <img src="https://img.shields.io/github/repo-size/mateusoliveiradev1/projeto-social?color=blueviolet" alt="Repo Size" />
-  <img src="https://img.shields.io/github/issues/mateusoliveiradev1/projeto-social?color=orange" alt="Issues" />
+  <img src="https://img.shields.io/badge/License-MIT-2962FF?style=for-the-badge" alt="License" />
+  <img src="https://img.shields.io/badge/HTML-5-E34F26?logo=html5&logoColor=white&style=for-the-badge" alt="HTML" />
+  <img src="https://img.shields.io/badge/CSS-3-1572B6?logo=css3&logoColor=white&style=for-the-badge" alt="CSS" />
+  <img src="https://img.shields.io/github/last-commit/mateusoliveiradev1/projeto-social?color=00ACC1&style=for-the-badge" alt="Last Commit" />
+  <img src="https://img.shields.io/github/repo-size/mateusoliveiradev1/projeto-social?color=AB47BC&style=for-the-badge" alt="Repo Size" />
+  <img src="https://img.shields.io/github/issues/mateusoliveiradev1/projeto-social?color=FB8C00&style=for-the-badge" alt="Issues" />
 
 </div>
 
@@ -42,6 +42,13 @@ Interface estática que simula um smartphone. A moldura central acomoda um `ifra
 - Menu mobile com botão flutuante (FAB) e animação hambúrguer → X (CSS-only).
 - Responsividade com `clamp()` e media queries para telas pequenas.
 - Preload de imagens críticas no `index.html` para melhorar LCP.
+
+## Hero
+<p align="center">
+  <img src="images/tela-home.jpg" alt="Screenshot principal" width="640" />
+</p>
+
+> Experimente no celular usando o QR Code abaixo.
 
 ## Capturas de tela
 <p align="center">
@@ -90,6 +97,8 @@ python -m http.server 8000
 # 3) Abrir no navegador
 http://localhost:8000/
 ```
+
+> Dica: se usar VS Code, a extensão "Live Server" também funciona muito bem.
 
 ## Publicação (GitHub Pages)
 1. Suba a branch `main` para seu repositório.
@@ -152,6 +161,26 @@ projeto-social/
 - Demo: https://mateusoliveiradev1.github.io/projeto-social/
 - Repositório: https://github.com/mateusoliveiradev1/projeto-social
 - Issues: https://github.com/mateusoliveiradev1/projeto-social/issues
+
+## FAQ
+- Como abro pelo celular? Use o QR Code acima ou acesse a URL da demo.
+- Dá para rodar sem servidor? Sim, abra `index.html`; porém algumas otimizações funcionam melhor com servidor.
+- Posso trocar os ícones? Sim, substitua as imagens em `images/` e ajuste os links em `index.html`.
+- Onde mudo o tamanho dos ícones? Em `style/style.css`, seletor `section#redes-sociais img`.
+
+## Contribuição
+Contribuições são muito bem-vindas! Abra uma issue com sugestão/bug ou envie um pull request.
+
+Passos sugeridos:
+- Fork do repositório
+- Criar branch de feature: `git checkout -b feature/nome`
+- Commitar: `git commit -m "feat: descrição"`
+- Push: `git push origin feature/nome`
+- Abrir PR
+
+## Contato
+- Autor: [@mateusoliveiradev1](https://github.com/mateusoliveiradev1)
+- Dúvidas e ideias: use as Issues do repositório
 
 ## Licença e Créditos
 - Licença: MIT (veja `LICENSE`).
