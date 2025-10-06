@@ -51,6 +51,13 @@ Interface estática que simula um smartphone. A moldura central acomoda um `ifra
 
 > Experimente no celular usando o QR Code abaixo.
 
+### Screenshot completo (desktop)
+<p align="center">
+  <img src="images/screenshot-desktop.jpg" alt="Screenshot completo da interface (desktop)" width="960" />
+</p>
+
+> Como capturar: abra a demo, maximize a janela, pressione `PrtScn` (Windows) ou `Shift+Cmd+4` (macOS) e salve como `images/screenshot-desktop.jpg`. Depois, faça commit.
+
 ## Capturas de tela
 <p align="center">
   <img src="images/tela-home.jpg" alt="Tela Home dentro do visor" width="420" />
@@ -82,11 +89,9 @@ Como gerar o GIF:
 - Recorte para 300×300 ou 400×400, compressão moderada.
 - Salve em `images/fab-toggle.gif` e substitua aqui com:
 
-```html
 <p align="center">
   <img src="images/fab-toggle.gif" alt="Animação do FAB (hambúrguer → X)" width="220" />
 </p>
-```
 
 > Dica: se quiser, podemos adicionar uma captura completa da interface diretamente aqui. É só enviar uma imagem ou me pedir para gerar e incluir.
 
