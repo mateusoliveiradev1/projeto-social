@@ -97,7 +97,7 @@ Como gerar o GIF:
 
 ### Abrir no celular
 <div align="center">
-  <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https%3A%2F%2Fmateusoliveiradev1.github.io%2Fprojeto-social%2F" alt="QR Code para abrir a demo no celular" />
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&margin=12&color=4e342e&bgcolor=f5f0ea&data=https%3A%2F%2Fmateusoliveiradev1.github.io%2Fprojeto-social%2F" alt="QR Code para abrir a demo no celular" />
   <p>Escaneie para abrir a versão online no seu smartphone.</p>
 </div>
 
