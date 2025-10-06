@@ -107,12 +107,6 @@ Como gerar o GIF:
 ## Executar localmente
 Requisitos: qualquer navegador moderno. Opcionalmente, Python para um servidor simples.
 
-- Com Python (recomendado):
-  - Entre na pasta do projeto e rode: `python -m http.server 8000`
-  - Abra: `http://localhost:8000/`
-
-- Sem servidor: abra `index.html` diretamente no navegador (algumas features funcionam melhor via servidor).
-
 ### Quick Start
 ```bash
 # 1) Clonar
@@ -125,6 +119,8 @@ python -m http.server 8000
 # 3) Abrir no navegador
 http://localhost:8000/
 ```
+
+Sem servidor: abra `index.html` diretamente (algumas features funcionam melhor via servidor).
 
 > Dica: se usar VS Code, a extensão "Live Server" também funciona muito bem.
 
