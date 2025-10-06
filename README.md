@@ -208,10 +208,14 @@ Passos sugeridos:
 - Dúvidas e ideias: use as Issues do repositório
 
 ## Changelog
-- docs: GIF no topo, sumário ajustado e badges harmonizados
-- docs/media: GIF 300px sépia gerado e otimização do `fab-toggle.gif`
-- docs: README enxuto com imagens estilizadas e QR Code temático
-- docs: Quick Start consolidado e logos padronizados a 40px
+- 2025-10-05 — docs: adicionar Changelog e alinhar Sumário — [`73e095f`](https://github.com/mateusoliveiradev1/projeto-social/commit/73e095f)
+- 2025-10-05 — docs: consolidar Execução local e padronizar apresentação de logos — [`1be4397`](https://github.com/mateusoliveiradev1/projeto-social/commit/1be4397)
+- 2025-10-05 — docs: GIF no topo, sumário ajustado e badges harmonizados — [`199a33b`](https://github.com/mateusoliveiradev1/projeto-social/commit/199a33b)
+- 2025-10-05 — docs: README enxuto + estilos nas imagens; mídia: GIF 300px sépia — [`da0c5ce`](https://github.com/mateusoliveiradev1/projeto-social/commit/da0c5ce)
+- 2025-10-05 — docs/media: GIF suavizado e QR temático; screenshot otimizada — [`9a98f7d`](https://github.com/mateusoliveiradev1/projeto-social/commit/9a98f7d)
+- 2025-10-05 — docs: adicionar screenshot desktop e GIF do FAB gerados da demo — [`0bd8580`](https://github.com/mateusoliveiradev1/projeto-social/commit/0bd8580)
+- 2025-10-05 — docs: incluir screenshot completo (placeholder) e exibir GIF do FAB — [`467b835`](https://github.com/mateusoliveiradev1/projeto-social/commit/467b835)
+- 2025-10-05 — docs: README finalizado com paleta harmonizada, seção animação FAB e créditos — [`552e938`](https://github.com/mateusoliveiradev1/projeto-social/commit/552e938)
 
 ## Licença e Créditos
 - Licença: MIT (veja `LICENSE`).
