@@ -26,13 +26,14 @@
 - Visão Geral
 - Funcionalidades
 - Animação do FAB
-- Executar localmente
+- Quick Start
 - Publicação (GitHub Pages)
 - Estrutura
 - Como adicionar uma nova rede
 - Personalização
 - Acessibilidade
 - Roadmap
+- Changelog
 - Licença e Créditos
 
 ## Visão Geral
@@ -205,6 +206,12 @@ Passos sugeridos:
 ## Contato
 - Autor: [@mateusoliveiradev1](https://github.com/mateusoliveiradev1)
 - Dúvidas e ideias: use as Issues do repositório
+
+## Changelog
+- docs: GIF no topo, sumário ajustado e badges harmonizados
+- docs/media: GIF 300px sépia gerado e otimização do `fab-toggle.gif`
+- docs: README enxuto com imagens estilizadas e QR Code temático
+- docs: Quick Start consolidado e logos padronizados a 40px
 
 ## Licença e Créditos
 - Licença: MIT (veja `LICENSE`).
