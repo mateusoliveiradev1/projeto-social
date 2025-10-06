@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Captura FAB (aberto)</title>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    iframe { width: 100vw; height: 100vh; border: 0; display: block; }
+  </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const f = document.getElementById('demo');
+      f.addEventListener('load', () => {
+        try {
+          const doc = f.contentDocument;
+          const cb = doc && doc.getElementById('toggle-menu');
+          if (cb) { cb.checked = true; }
+        } catch (e) {
+          console.warn('Não foi possível marcar o checkbox no iframe:', e);
+        }
+      });
+    });
+  </script>
+  </head>
+<body>
+  <iframe id="demo" src="index.html"></iframe>
+</body>
+</html>
