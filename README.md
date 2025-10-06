@@ -6,14 +6,14 @@
   <p><i>UI estilo smartphone, com conteúdos de redes sociais exibidos no visor. Barra de ícones à direita no desktop e menu mobile com FAB animado — tudo em HTML + CSS.</i></p>
 
   <a href="https://mateusoliveiradev1.github.io/projeto-social/" target="_blank">
-    <img src="https://img.shields.io/badge/DEMO-Acesse-00C853?style=for-the-badge" alt="Live Demo" />
+    <img src="https://img.shields.io/badge/DEMO-Acesse-4CAF50?style=for-the-badge" alt="Live Demo" />
   </a>
-  <img src="https://img.shields.io/badge/License-MIT-2962FF?style=for-the-badge" alt="License" />
+  <img src="https://img.shields.io/badge/License-MIT-795548?style=for-the-badge" alt="License" />
   <img src="https://img.shields.io/badge/HTML-5-E34F26?logo=html5&logoColor=white&style=for-the-badge" alt="HTML" />
   <img src="https://img.shields.io/badge/CSS-3-1572B6?logo=css3&logoColor=white&style=for-the-badge" alt="CSS" />
-  <img src="https://img.shields.io/github/last-commit/mateusoliveiradev1/projeto-social?color=00ACC1&style=for-the-badge" alt="Last Commit" />
-  <img src="https://img.shields.io/github/repo-size/mateusoliveiradev1/projeto-social?color=AB47BC&style=for-the-badge" alt="Repo Size" />
-  <img src="https://img.shields.io/github/issues/mateusoliveiradev1/projeto-social?color=FB8C00&style=for-the-badge" alt="Issues" />
+  <img src="https://img.shields.io/github/last-commit/mateusoliveiradev1/projeto-social?color=8D6E63&style=for-the-badge" alt="Last Commit" />
+  <img src="https://img.shields.io/github/repo-size/mateusoliveiradev1/projeto-social?color=A1887F&style=for-the-badge" alt="Repo Size" />
+  <img src="https://img.shields.io/github/issues/mateusoliveiradev1/projeto-social?color=FFB300&style=for-the-badge" alt="Issues" />
 
 </div>
 
@@ -45,7 +45,8 @@ Interface estática que simula um smartphone. A moldura central acomoda um `ifra
 
 ## Hero
 <p align="center">
-  <img src="images/tela-home.jpg" alt="Screenshot principal" width="640" />
+  <img src="images/frame-iphone.png" alt="Moldura iPhone" width="240" />
+  <img src="images/tela-home.jpg" alt="Screenshot principal" width="380" />
 </p>
 
 > Experimente no celular usando o QR Code abaixo.
@@ -57,6 +58,35 @@ Interface estática que simula um smartphone. A moldura central acomoda um `ifra
 <p align="center">
   <img src="images/frame-iphone.png" alt="Moldura do iPhone usada na UI" width="220" />
 </p>
+
+## Animação do FAB
+Visual do botão circular com hambúrguer → X (CSS + SVG). GIF sugerido: `images/fab-toggle.gif`.
+
+```html
+<!-- Trecho simplificado do botão -->
+<input type="checkbox" id="toggle-menu" hidden />
+<label id="menu-button" for="toggle-menu">
+  <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+    <line class="bar top" x1="3" y1="7" x2="21" y2="7" />
+    <line class="bar middle" x1="3" y1="12" x2="21" y2="12" />
+    <line class="bar bottom" x1="3" y1="17" x2="21" y2="17" />
+  </svg>
+  <span class="sr-only">Abrir menu</span>
+  <!-- estilos de transição e rotação definidos em style/style.css -->
+  <!-- ao marcar #toggle-menu:checked, as barras formam um X -->
+</label>
+```
+
+Como gerar o GIF:
+- Grave 3–4s abrindo/fechando o menu (ScreenToGif, OBS, QuickTime).
+- Recorte para 300×300 ou 400×400, compressão moderada.
+- Salve em `images/fab-toggle.gif` e substitua aqui com:
+
+```html
+<p align="center">
+  <img src="images/fab-toggle.gif" alt="Animação do FAB (hambúrguer → X)" width="220" />
+</p>
+```
 
 > Dica: se quiser, podemos adicionar uma captura completa da interface diretamente aqui. É só enviar uma imagem ou me pedir para gerar e incluir.
 
@@ -185,3 +215,10 @@ Passos sugeridos:
 ## Licença e Créditos
 - Licença: MIT (veja `LICENSE`).
 - Imagens e logos utilizados apenas para fins didáticos/demonstração.
+- Recomenda-se usar materiais oficiais das marcas:
+  - YouTube: https://www.youtube.com/about/brand-resources/
+  - Instagram: https://brand.instagram.com/
+  - Facebook: https://about.facebook.com/brand/resources/
+  - X (Twitter): https://brand.x.com/
+  - GitHub: https://github.com/logos
+- Fundo madeira (`images/fundo-madeira.jpg`): substitua por uma foto própria ou de bancos livres (Unsplash, Pexels), mantendo créditos.
