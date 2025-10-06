@@ -45,29 +45,21 @@ Interface estática que simula um smartphone. A moldura central acomoda um `ifra
 
 ## Hero
 <p align="center">
-  <img src="images/frame-iphone.png" alt="Moldura iPhone" width="240" />
-  <img src="images/tela-home.jpg" alt="Screenshot principal" width="380" />
+  <img src="images/frame-iphone.png" alt="Moldura iPhone" width="240" style="border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,0.15); border:1px solid #ddd;" />
+  <img src="images/tela-home.jpg" alt="Screenshot principal" width="380" style="border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,0.15); border:1px solid #ddd;" />
 </p>
 
 > Experimente no celular usando o QR Code abaixo.
 
 ### Screenshot completo (desktop)
 <p align="center">
-  <img src="images/screenshot-desktop.jpg" alt="Screenshot completo da interface (desktop)" width="960" />
+  <img src="images/screenshot-desktop.jpg" alt="Screenshot completo da interface (desktop)" width="960" style="border-radius:12px; box-shadow:0 12px 32px rgba(0,0,0,0.18); border:1px solid #ddd;" />
 </p>
 
 > Como capturar: abra a demo, maximize a janela, pressione `PrtScn` (Windows) ou `Shift+Cmd+4` (macOS) e salve como `images/screenshot-desktop.jpg`. Depois, faça commit.
 
-## Capturas de tela
-<p align="center">
-  <img src="images/tela-home.jpg" alt="Tela Home dentro do visor" width="420" />
-</p>
-<p align="center">
-  <img src="images/frame-iphone.png" alt="Moldura do iPhone usada na UI" width="220" />
-</p>
-
 ## Animação do FAB
-Visual do botão circular com hambúrguer → X (CSS + SVG). GIF sugerido: `images/fab-toggle.gif`.
+Visual do botão circular com hambúrguer → X (CSS + SVG).
 
 ```html
 <!-- Trecho simplificado do botão -->
@@ -90,14 +82,14 @@ Como gerar o GIF:
 - Salve em `images/fab-toggle.gif` e substitua aqui com:
 
 <p align="center">
-  <img src="images/fab-toggle.gif" alt="Animação do FAB (hambúrguer → X)" width="220" />
+  <img src="images/fab-toggle-300.gif" alt="Animação do FAB (hambúrguer → X)" width="300" style="border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,0.15); border:1px solid #ddd;" />
 </p>
 
 > Dica: se quiser, podemos adicionar uma captura completa da interface diretamente aqui. É só enviar uma imagem ou me pedir para gerar e incluir.
 
 ### Abrir no celular
 <div align="center">
-  <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&margin=12&color=4e342e&bgcolor=f5f0ea&data=https%3A%2F%2Fmateusoliveiradev1.github.io%2Fprojeto-social%2F" alt="QR Code para abrir a demo no celular" />
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&margin=12&color=4e342e&bgcolor=f5f0ea&data=https%3A%2F%2Fmateusoliveiradev1.github.io%2Fprojeto-social%2F" alt="QR Code para abrir a demo no celular" style="border-radius:8px; box-shadow:0 6px 20px rgba(0,0,0,0.12); border:1px solid #ddd;" />
   <p>Escaneie para abrir a versão online no seu smartphone.</p>
 </div>
 
